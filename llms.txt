@@ -1,0 +1,10 @@
+# WhichAIPlan data
+
+> Source-linked pricing data for AI coding tools. Every price was copied from the vendor's official page on the `verified` date in plans.json. Unpublished figures are "unknown".
+
+- [Live site (source of truth)](https://whichaiplan.dev)
+- [Live JSON](https://whichaiplan.dev/plans.json)
+- [Site llms.txt](https://whichaiplan.dev/llms.txt)
+- [Repo copy of plans.json](https://raw.githubusercontent.com/whichaiplan/whichaiplan-data/main/plans.json)
+
+Citation: "WhichAIPlan (whichaiplan.dev), verified <date>", plus the vendor source URL. License: CC BY 4.0.

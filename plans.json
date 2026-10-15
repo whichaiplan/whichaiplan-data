@@ -1,0 +1,738 @@
+{
+ "verified": "2026-10-14",
+ "note": "Every figure copied from the cited official page on the verified date. 'unknown' = not published on the official page. Never invent figures.",
+ "tools": [
+  {
+   "id": "cursor",
+   "name": "Cursor",
+   "vendor": "Anysphere",
+   "type": "editor",
+   "editor": "Cursor (VS Code fork)",
+   "pricingUrl": "https://cursor.com/pricing",
+   "sources": [
+    "https://cursor.com/docs/models-and-pricing",
+    "https://cursor.com/help/account-and-billing/pricing",
+    "https://cursor.com/pricing"
+   ],
+   "limitModel": "Shared AI usage pool across Cursor and Grok; allowance refreshes weekly; third-party models billed separately at API list price; top-offs available.",
+   "limitSource": "https://cursor.com/pricing",
+   "warning": "Cursor is now sold as part of The X Subscription (Free, Plus $8, Premium $30, Super $100, Ultra $200). Legacy Pro ($20) and Pro+ ($60) are not sold to new customers; existing subscribers keep them until they switch or cancel.",
+   "plans": [
+    {
+     "name": "Free",
+     "priceUsdMonthly": 0,
+     "usage": "Limited agent and chat requests",
+     "source": "https://cursor.com/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Plus",
+     "priceUsdMonthly": 8,
+     "usage": "Basic shared pool; Grok models only",
+     "source": "https://cursor.com/pricing",
+     "verified": "2026-10-14",
+     "annualNote": "$80/yr billed annually",
+     "annualUsdMonthly": 6.67
+    },
+    {
+     "name": "Premium",
+     "priceUsdMonthly": 30,
+     "usage": "4x Plus; third-party models at API list price; cloud agents",
+     "source": "https://cursor.com/pricing",
+     "verified": "2026-10-14",
+     "annualNote": "$300/yr billed annually",
+     "annualUsdMonthly": 25.0
+    },
+    {
+     "name": "Super",
+     "priceUsdMonthly": 100,
+     "usage": "15x Plus; priority access at peak",
+     "source": "https://cursor.com/pricing",
+     "verified": "2026-10-14",
+     "annualNote": "$1,000/yr billed annually",
+     "annualUsdMonthly": 83.33
+    },
+    {
+     "name": "Ultra",
+     "priceUsdMonthly": 200,
+     "usage": "50x Plus",
+     "source": "https://cursor.com/pricing",
+     "verified": "2026-10-14",
+     "annualNote": "$2,000/yr billed annually",
+     "annualUsdMonthly": 166.67
+    },
+    {
+     "name": "Pro (legacy)",
+     "priceUsdMonthly": 20,
+     "usage": "Legacy plan: not sold to new customers; existing subscribers keep it. Two monthly pools (Cursor models + other models at API price). Comparable new plan: Premium",
+     "source": "https://cursor.com/help/account-and-billing/pricing",
+     "verified": "2026-10-14",
+     "conflict": true,
+     "legacy": true
+    },
+    {
+     "name": "Pro+ (legacy)",
+     "priceUsdMonthly": 60,
+     "usage": "Legacy plan: not sold to new customers; comparable new plan: Super",
+     "source": "https://cursor.com/help/account-and-billing/pricing",
+     "verified": "2026-10-14",
+     "legacy": true,
+     "conflict": true
+    }
+   ],
+   "teamPlans": [
+    {
+     "name": "Teams (Premium, Super or Ultra seat)",
+     "priceUsdMonthly": 30,
+     "usage": "$30, $100 or $200 per seat/mo; each seat gets the matching individual pool; third-party models at API price plus $0.25 per million tokens",
+     "source": "https://cursor.com/help/account-and-billing/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Teams Standard (legacy)",
+     "priceUsdMonthly": 40,
+     "usage": "Legacy, per user; not sold to new customers",
+     "source": "https://cursor.com/help/account-and-billing/pricing",
+     "verified": "2026-10-14",
+     "legacy": true
+    },
+    {
+     "name": "Enterprise",
+     "priceUsdMonthly": "custom",
+     "usage": "Pooled usage, SCIM, audit logs, invoice billing; contact sales",
+     "source": "https://cursor.com/help/account-and-billing/pricing",
+     "verified": "2026-10-14"
+    }
+   ],
+   "core": true
+  },
+  {
+   "id": "claude-code",
+   "name": "Claude Code",
+   "vendor": "Anthropic",
+   "type": "terminal",
+   "editor": "Terminal / any editor",
+   "pricingUrl": "https://claude.com/pricing",
+   "sources": [
+    "https://anthropic.com/pricing",
+    "https://claude.com/pricing",
+    "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+   ],
+   "limitModel": "Rolling 5-hour session window plus weekly limits on paid plans; Claude Code shares the pool with Claude chat; no fixed message count published; optional usage credits at API rates.",
+   "limitSource": "https://claude.com/pricing",
+   "plans": [
+    {
+     "name": "Free",
+     "priceUsdMonthly": 0,
+     "usage": "No Claude Code",
+     "source": "https://claude.com/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro",
+     "priceUsdMonthly": 20,
+     "annualUsdMonthly": 17,
+     "usage": "At least 5x Free per 5-hour session; exact tokens unknown",
+     "source": "https://claude.com/pricing",
+     "verified": "2026-10-14",
+     "annualNote": "$17/mo billed annually ($200/yr)"
+    },
+    {
+     "name": "Max 5x",
+     "priceUsdMonthly": 100,
+     "usage": "5x Pro per 5-hour session; weekly limit; $100/mo API credits; monthly billing only",
+     "source": "https://claude.com/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Max 20x",
+     "priceUsdMonthly": 200,
+     "usage": "20x Pro per 5-hour session; weekly limit; $200/mo API credits; monthly billing only",
+     "source": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+     "verified": "2026-10-14"
+    }
+   ],
+   "teamPlans": [
+    {
+     "name": "Team Standard seat",
+     "priceUsdMonthly": 25,
+     "usage": "More usage than Pro; $20/seat/mo billed annually; 2 to 150 seats",
+     "source": "https://anthropic.com/pricing",
+     "verified": "2026-10-14",
+     "annualUsdMonthly": 20
+    },
+    {
+     "name": "Team Premium seat",
+     "priceUsdMonthly": 125,
+     "usage": "5x Standard seat usage; $100/seat/mo billed annually",
+     "source": "https://anthropic.com/pricing",
+     "verified": "2026-10-14",
+     "annualUsdMonthly": 100
+    },
+    {
+     "name": "Enterprise seat",
+     "priceUsdMonthly": 20,
+     "usage": "$20/seat/mo plus usage billed at API rates; annual only",
+     "source": "https://claude.com/pricing",
+     "verified": "2026-10-14"
+    }
+   ],
+   "core": true
+  },
+  {
+   "id": "codex",
+   "name": "OpenAI Codex",
+   "vendor": "OpenAI",
+   "type": "terminal+cloud",
+   "editor": "CLI, IDE extension, web, Codex app",
+   "pricingUrl": "https://chatgpt.com/codex/pricing/",
+   "sources": [
+    "https://learn.chatgpt.com/docs/pricing",
+    "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+    "https://chatgpt.com/codex/pricing/"
+   ],
+   "limitModel": "Included in ChatGPT plans. Plus: estimated local messages per 5-hour window (e.g. GPT-6.1 Sol 15-160, GPT-6 Astra 5-45), weekly limits may apply. Pro: no 5-hour limit currently. Credits extend usage.",
+   "limitSource": "https://learn.chatgpt.com/docs/pricing",
+   "plans": [
+    {
+     "name": "Free",
+     "priceUsdMonthly": 0,
+     "usage": "Limited Codex",
+     "source": "https://chatgpt.com/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Go",
+     "priceUsdMonthly": 8,
+     "usage": "Limited Codex; may include ads",
+     "source": "https://learn.chatgpt.com/docs/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Plus",
+     "priceUsdMonthly": 20,
+     "usage": "Expanded Codex; 5-hour message estimates by model",
+     "source": "https://learn.chatgpt.com/docs/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro 100",
+     "priceUsdMonthly": 100,
+     "usage": "No 5-hour limit currently; exact allowance unknown",
+     "source": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro 200",
+     "priceUsdMonthly": 200,
+     "usage": "More than Pro 100; new subs get lower allowance than before (grandfathering to 2026-10-29)",
+     "source": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro 500",
+     "priceUsdMonthly": 500,
+     "usage": "Highest allowance; Ultrafast mode",
+     "source": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+     "verified": "2026-10-14"
+    }
+   ],
+   "core": true
+  },
+  {
+   "id": "copilot",
+   "name": "GitHub Copilot",
+   "vendor": "GitHub / Microsoft",
+   "type": "extension",
+   "editor": "VS Code, Visual Studio, JetBrains, Neovim, Xcode, Zed, Eclipse, CLI",
+   "pricingUrl": "https://github.com/features/copilot/plans",
+   "sources": [
+    "https://docs.github.com/en/copilot/get-started/plans",
+    "https://github.com/features/copilot/plans"
+   ],
+   "limitModel": "Monthly GitHub AI Credits (1 credit = $0.01) = base + variable flex allotment; resets monthly; completions unlimited on paid plans; overage at $0.01/credit with a budget.",
+   "limitSource": "https://github.com/features/copilot/plans",
+   "plans": [
+    {
+     "name": "Free",
+     "priceUsdMonthly": 0,
+     "usage": "FAQ: 2,000 completions + 50 chat requests/month",
+     "source": "https://github.com/features/copilot/plans",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro",
+     "priceUsdMonthly": 10,
+     "usage": "$15/mo of AI credits ($10 base + $5 flex); unlimited completions",
+     "source": "https://github.com/features/copilot/plans",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro+",
+     "priceUsdMonthly": 39,
+     "usage": "$70/mo of AI credits ($39 base + $31 flex)",
+     "source": "https://github.com/features/copilot/plans",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Max",
+     "priceUsdMonthly": 100,
+     "usage": "$200/mo total AI credits ($100 base; flex amount not shown)",
+     "source": "https://github.com/features/copilot/plans",
+     "verified": "2026-10-14"
+    }
+   ],
+   "teamPlans": [
+    {
+     "name": "Business",
+     "priceUsdMonthly": 19,
+     "usage": "Per granted seat; 1,900 AI credits per user per month, pooled",
+     "source": "https://docs.github.com/en/copilot/get-started/plans",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Enterprise",
+     "priceUsdMonthly": 39,
+     "usage": "Per granted seat; 3,900 AI credits per user per month, pooled",
+     "source": "https://docs.github.com/en/copilot/get-started/plans",
+     "verified": "2026-10-14"
+    }
+   ],
+   "core": true
+  },
+  {
+   "id": "windsurf",
+   "name": "Windsurf (now Devin Desktop)",
+   "vendor": "Cognition",
+   "type": "editor",
+   "editor": "Devin Desktop (formerly Windsurf, VS Code fork) + JetBrains plugin",
+   "pricingUrl": "https://devin.ai/pricing",
+   "sources": [
+    "https://devin.ai/pricing",
+    "https://docs.devin.ai/desktop/devin-desktop-faq",
+    "https://devin.ai/blog/windsurf-pricing-plans"
+   ],
+   "limitModel": "Quota allowance refreshing daily and weekly; extra usage at API pricing. windsurf.com/pricing now redirects to devin.ai/pricing (checked 2026-10-14 18:15 CT).",
+   "limitSource": "https://devin.ai/pricing",
+   "plans": [
+    {
+     "name": "Free",
+     "priceUsdMonthly": 0,
+     "usage": "Light agent quota, limited models, unlimited Tab",
+     "source": "https://devin.ai/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro",
+     "priceUsdMonthly": 20,
+     "usage": "Increased quotas, all frontier models; exact quota unknown",
+     "source": "https://devin.ai/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Max",
+     "priceUsdMonthly": 200,
+     "usage": "Significantly higher quotas; exact quota unknown",
+     "source": "https://devin.ai/pricing",
+     "verified": "2026-10-14"
+    }
+   ],
+   "core": true
+  },
+  {
+   "id": "google",
+   "name": "Google AI (Jules, Antigravity, Gemini Code Assist)",
+   "vendor": "Google",
+   "type": "cloud+editor",
+   "editor": "Jules (web agent), Antigravity (agent IDE + CLI), Gemini Code Assist IDE extensions",
+   "pricingUrl": "https://one.google.com/about/ai-premium/",
+   "limitModel": "Consumer Google AI plans set tiered limits (Limited/Expanded/Higher/Highest) for Jules tasks and Antigravity agent requests; exact numbers not published. Gemini Code Assist Standard/Enterprise are per-user business licenses.",
+   "limitSource": "https://one.google.com/about/ai-premium/",
+   "plans": [
+    {
+     "name": "Google AI Plus",
+     "priceUsdMonthly": 4.99,
+     "usage": "Limited Jules tasks and Antigravity agent requests",
+     "source": "https://one.google.com/about/ai-premium/",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Google AI Pro",
+     "priceUsdMonthly": 19.99,
+     "usage": "Expanded Jules and Antigravity limits; $10/mo Google Cloud credits",
+     "source": "https://one.google.com/about/ai-premium/",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Google AI Ultra 5x",
+     "priceUsdMonthly": 99.99,
+     "usage": "5x Pro plan; higher Jules and Antigravity limits; $40/mo Cloud credits",
+     "source": "https://one.google.com/about/ai-premium/",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Google AI Ultra 20x",
+     "priceUsdMonthly": 199.99,
+     "usage": "20x Pro plan; highest Jules and Antigravity limits; $100/mo Cloud credits",
+     "source": "https://one.google.com/about/ai-premium/",
+     "verified": "2026-10-14"
+    }
+   ],
+   "teamPlans": [
+    {
+     "name": "Gemini Code Assist Standard",
+     "priceUsdMonthly": 22.8,
+     "usage": "Per user; $19/user/mo with annual commitment",
+     "source": "https://codeassist.google/",
+     "verified": "2026-10-14",
+     "annualUsdMonthly": 19
+    },
+    {
+     "name": "Gemini Code Assist Enterprise",
+     "priceUsdMonthly": 54,
+     "usage": "Per user; $45/user/mo with annual commitment",
+     "source": "https://codeassist.google/",
+     "verified": "2026-10-14",
+     "annualUsdMonthly": 45
+    }
+   ],
+   "warning": "Since 2026-06-18 the free Gemini Code Assist for individuals and the Gemini CLI for Google One users were replaced by Antigravity and the Antigravity CLI.",
+   "sources": [
+    "https://codeassist.google/",
+    "https://one.google.com/about/ai-premium/"
+   ],
+   "core": false
+  },
+  {
+   "id": "kiro",
+   "name": "Kiro",
+   "vendor": "Amazon Web Services",
+   "type": "editor",
+   "editor": "Kiro IDE, Kiro CLI, Kiro Web",
+   "pricingUrl": "https://kiro.dev/pricing/",
+   "limitModel": "Monthly credits that reset each billing month (no rollover); a credit is a unit of work and models consume credits at different rates; add-on credits $0.04 each.",
+   "limitSource": "https://kiro.dev/pricing/",
+   "plans": [
+    {
+     "name": "Free",
+     "priceUsdMonthly": 0,
+     "usage": "50 credits; open-weight models and Claude Sonnet 4.5 with rate limits",
+     "source": "https://kiro.dev/pricing/",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro",
+     "priceUsdMonthly": 20,
+     "usage": "Monthly credits; premium models incl. Claude Opus 5; add-on credits $0.04",
+     "source": "https://kiro.dev/pricing/",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro+",
+     "priceUsdMonthly": 40,
+     "usage": "More monthly credits than Pro",
+     "source": "https://kiro.dev/pricing/",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro Max",
+     "priceUsdMonthly": 100,
+     "usage": "More monthly credits than Pro+",
+     "source": "https://kiro.dev/pricing/",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Power",
+     "priceUsdMonthly": 200,
+     "usage": "Highest monthly credits",
+     "source": "https://kiro.dev/pricing/",
+     "verified": "2026-10-14"
+    }
+   ],
+   "sources": [
+    "https://kiro.dev/pricing/"
+   ],
+   "core": false
+  },
+  {
+   "id": "zed",
+   "name": "Zed",
+   "vendor": "Zed Industries",
+   "type": "editor",
+   "editor": "Zed editor (macOS, Linux, Windows)",
+   "pricingUrl": "https://zed.dev/pricing",
+   "limitModel": "Pro includes $5 of hosted-model tokens a month, then usage billing at API list price +10%; Personal is free with your own API keys or external agents.",
+   "limitSource": "https://zed.dev/pricing",
+   "plans": [
+    {
+     "name": "Personal",
+     "priceUsdMonthly": 0,
+     "usage": "Unlimited use with your own API keys or external agents (Claude Agent, Codex CLI)",
+     "source": "https://zed.dev/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro",
+     "priceUsdMonthly": 10,
+     "usage": "Unlimited edit predictions; $5 of tokens included; then API list price +10%",
+     "source": "https://zed.dev/pricing",
+     "verified": "2026-10-14"
+    }
+   ],
+   "teamPlans": [
+    {
+     "name": "Business",
+     "priceUsdMonthly": 30,
+     "usage": "Per seat; org AI policies; no bundled LLM credits",
+     "source": "https://zed.dev/pricing",
+     "verified": "2026-10-14"
+    }
+   ],
+   "sources": [
+    "https://zed.dev/pricing"
+   ],
+   "core": false
+  },
+  {
+   "id": "opencode",
+   "name": "OpenCode Go",
+   "vendor": "OpenCode",
+   "type": "terminal",
+   "editor": "OpenCode or any coding agent",
+   "pricingUrl": "https://opencode.ai/go",
+   "limitModel": "Per-model estimated requests per 5 hours plus a monthly usage cap; top-ups available.",
+   "limitSource": "https://opencode.ai/go",
+   "plans": [
+    {
+     "name": "Go",
+     "priceUsdMonthly": 10,
+     "usage": "Open-source and low-cost models; per-model 5-hour request estimates and monthly caps",
+     "source": "https://opencode.ai/go",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Go Plus",
+     "priceUsdMonthly": 40,
+     "usage": "Higher 5-hour and monthly limits than Go",
+     "source": "https://opencode.ai/go",
+     "verified": "2026-10-14"
+    }
+   ],
+   "sources": [
+    "https://opencode.ai/go"
+   ],
+   "core": false
+  },
+  {
+   "id": "amp",
+   "name": "Amp",
+   "vendor": "Amp",
+   "type": "terminal+cloud",
+   "editor": "Amp CLI, editor extensions, cloud runners (orbs)",
+   "pricingUrl": "https://ampcode.com/pricing",
+   "limitModel": "Plans pay for hosted runner (orb) minutes; model tokens come from your own ChatGPT/Claude subscriptions or API keys with no Amp token fees.",
+   "limitSource": "https://ampcode.com/pricing",
+   "plans": [
+    {
+     "name": "Hobby",
+     "priceUsdMonthly": 0,
+     "usage": "Pay-as-you-go orbs or your own runners; bring your own keys/subscriptions",
+     "source": "https://ampcode.com/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Individual",
+     "priceUsdMonthly": 20,
+     "usage": "45,000 orb minutes; bring your own keys/subscriptions",
+     "source": "https://ampcode.com/pricing",
+     "verified": "2026-10-14"
+    }
+   ],
+   "teamPlans": [
+    {
+     "name": "Teams",
+     "priceUsdMonthly": 0,
+     "usage": "No extra charge; members on their own tiers; pooled credits",
+     "source": "https://ampcode.com/pricing",
+     "verified": "2026-10-14"
+    }
+   ],
+   "sources": [
+    "https://ampcode.com/pricing"
+   ],
+   "core": false
+  },
+  {
+   "id": "cline",
+   "name": "Cline",
+   "vendor": "Cline",
+   "type": "extension",
+   "editor": "VS Code extension, CLI (JetBrains on Enterprise)",
+   "pricingUrl": "https://cline.bot/pricing",
+   "limitModel": "No subscription: the open-source extension is free and you pay model providers directly (BYOK) or buy inference credits at cost.",
+   "limitSource": "https://cline.bot/pricing",
+   "plans": [
+    {
+     "name": "Open Source",
+     "priceUsdMonthly": 0,
+     "usage": "Free; pay only for model inference (your keys or Cline credits at cost)",
+     "source": "https://cline.bot/pricing",
+     "verified": "2026-10-14"
+    }
+   ],
+   "sources": [
+    "https://cline.bot/pricing"
+   ],
+   "core": false
+  },
+  {
+   "id": "replit",
+   "name": "Replit",
+   "vendor": "Replit",
+   "type": "app builder",
+   "editor": "Browser (Replit Agent), mobile app",
+   "pricingUrl": "https://replit.com/pricing",
+   "limitModel": "Starter gets daily Agent credits up to a monthly cap; paid plans include monthly credits toward models, then pay-as-you-go.",
+   "limitSource": "https://docs.replit.com/billing/plans",
+   "plans": [
+    {
+     "name": "Starter",
+     "priceUsdMonthly": 0,
+     "usage": "Daily Agent credits up to a monthly cap; Lite build only; 1 published app",
+     "source": "https://docs.replit.com/billing/plans",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Core",
+     "priceUsdMonthly": 20,
+     "usage": "$20 toward more powerful models; up to 30 hours of chat on Free Mode; $18/mo billed annually",
+     "source": "https://replit.com/pricing",
+     "verified": "2026-10-14",
+     "annualUsdMonthly": 18
+    },
+    {
+     "name": "Pro",
+     "priceUsdMonthly": 100,
+     "usage": "$100 toward most powerful models; up to 15 collaborators; $90/mo billed annually",
+     "source": "https://replit.com/pricing",
+     "verified": "2026-10-14",
+     "annualUsdMonthly": 90
+    }
+   ],
+   "sources": [
+    "https://docs.replit.com/billing/plans",
+    "https://replit.com/pricing"
+   ],
+   "core": false
+  },
+  {
+   "id": "bolt",
+   "name": "Bolt",
+   "vendor": "StackBlitz",
+   "type": "app builder",
+   "editor": "Browser (bolt.new)",
+   "pricingUrl": "https://bolt.new/pricing",
+   "limitModel": "Monthly token allowance; free plan also has a daily cap; paid tokens roll over for one extra month.",
+   "limitSource": "https://bolt.new/pricing",
+   "plans": [
+    {
+     "name": "Free",
+     "priceUsdMonthly": 0,
+     "usage": "300K tokens/day, 1M tokens/month",
+     "source": "https://bolt.new/pricing",
+     "verified": "2026-10-14"
+    },
+    {
+     "name": "Pro",
+     "priceUsdMonthly": 25,
+     "usage": "Starts at 10M tokens/month; no daily limit; unused tokens roll over",
+     "source": "https://bolt.new/pricing",
+     "verified": "2026-10-14"
+    }
+   ],
+   "teamPlans": [
+    {
+     "name": "Teams",
+     "priceUsdMonthly": 30,
+     "usage": "Per member; each member gets their own token allotment",
+     "source": "https://bolt.new/pricing",
+     "verified": "2026-10-14"
+    }
+   ],
+   "sources": [
+    "https://bolt.new/pricing"
+   ],
+   "core": false
+  }
+ ],
+ "changelog": [
+  {
+   "date": "2026-10-14",
+   "tool": "all",
+   "text": "Initial dataset verified from official pages."
+  },
+  {
+   "date": "2026-10-14",
+   "tool": "cursor",
+   "text": "Pricing page shows X/Grok-bundled tiers (Plus $8, Premium $30, Super $100, Ultra $200) with weekly-refreshing pool; docs page still lists Pro $20/Pro Plus $60. Flagged as conflict."
+  },
+  {
+   "date": "2026-10-14",
+   "tool": "codex",
+   "text": "Pro 200 new subscriptions get a lower allowance; grandfathering through 2026-10-29."
+  },
+  {
+   "date": "2026-10-14",
+   "tool": "windsurf",
+   "text": "windsurf.com/pricing 404s; Windsurf is now Devin Desktop (renamed 2026-06-02)."
+  },
+  {
+   "date": "2026-10-14",
+   "tool": "windsurf",
+   "text": "Re-checked all vendor pages at 18:15 CT: no price changes. windsurf.com/pricing now redirects to devin.ai/pricing instead of returning 404."
+  },
+  {
+   "date": "2026-10-14",
+   "tool": "claude-code",
+   "text": "Max 20x price confirmed at $200/mo on the Claude Help Center Max plan page (was marked unknown). Max is monthly-only."
+  },
+  {
+   "date": "2026-10-14",
+   "tool": "cursor",
+   "text": "Cursor help center confirms Pro ($20) and Pro+ ($60) are legacy plans, not sold to new customers. Relabelled as legacy; conflict resolved. Added annual prices (Plus $80/yr, Premium $300/yr, Super $1,000/yr, Ultra $2,000/yr)."
+  },
+  {
+   "date": "2026-10-14",
+   "tool": "all",
+   "text": "Added team and business pricing for Claude, Cursor, GitHub Copilot, Google, Zed, Amp and Bolt where the vendor publishes it."
+  },
+  {
+   "date": "2026-10-14",
+   "tool": "all",
+   "text": "Added 8 tools from official pricing pages: Google AI (Jules, Antigravity, Gemini Code Assist), Kiro, Zed, OpenCode Go, Amp, Cline, Replit, Bolt."
+  }
+ ],
+ "watch": [
+  "https://ampcode.com/pricing",
+  "https://anthropic.com/pricing",
+  "https://bolt.new/pricing",
+  "https://chatgpt.com/codex/pricing/",
+  "https://claude.com/pricing",
+  "https://cline.bot/pricing",
+  "https://codeassist.google/",
+  "https://cursor.com/docs/models-and-pricing",
+  "https://cursor.com/help/account-and-billing/pricing",
+  "https://cursor.com/pricing",
+  "https://devin.ai/pricing",
+  "https://docs.github.com/en/copilot/get-started/plans",
+  "https://github.com/features/copilot/plans",
+  "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+  "https://kiro.dev/pricing/",
+  "https://learn.chatgpt.com/docs/pricing",
+  "https://one.google.com/about/ai-premium/",
+  "https://opencode.ai/go",
+  "https://replit.com/pricing",
+  "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
+  "https://zed.dev/pricing"
+ ]
+}
