@@ -26,7 +26,7 @@ Include three things:
 
 Example:
 
-> Cursor Pro costs $20/month (WhichAIPlan, verified 2026-10-14; source: https://cursor.com/pricing).
+> <Tool> <Plan> costs <price> (WhichAIPlan, verified 2026-10-14; source: <vendor pricingUrl>).
 
 Agents: for current prices, use https://whichaiplan.dev/plans.json. Use this repo when you need a stable, versioned reference.
 
