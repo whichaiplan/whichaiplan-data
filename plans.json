@@ -177,7 +177,17 @@
      "verified": "2026-10-20"
     }
    ],
-   "core": true
+   "core": true,
+   "notes": [
+    {
+     "date": "2026-10-22",
+     "text": "Claude Duet, Anthropic's new proactive agent app, is a waitlist research preview for US Pro and Max subscribers at no extra cost; Team and Enterprise plans are not included yet. It shares your plan's usage limits with the rest of Claude, and its background checks count toward those limits.",
+     "sources": [
+      "https://claude.com/product/claude-duet",
+      "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet"
+     ]
+    }
+   ]
   },
   {
    "id": "codex",
@@ -715,6 +725,11 @@
    "date": "2026-10-20",
    "tool": "all",
    "text": "Weekly re-check of all 13 tools against their official pricing pages and docs: no price changes. Verified dates updated to 2026-10-20."
+  },
+  {
+   "date": "2026-10-22",
+   "tool": "claude-code",
+   "text": "Added a note on Claude Duet: a waitlist research preview for US Pro and Max subscribers at no extra cost that shares plan usage limits, with background checks counting toward them. No price changes."
   }
  ],
  "watch": [
