@@ -781,6 +781,11 @@
    "date": "2026-11-23",
    "tool": "windsurf",
    "text": "Devin's pricing page now lists a Teams plan at $80 per month for up to 100 users, with Devin Bots, SAML/OIDC SSO, cost controls with 3 usage tiers and centralized billing. The page does not say the price is per seat. Free $0, Pro $20 and Max $200 are unchanged. Verified 2026-11-23 at https://devin.ai/pricing."
+  },
+  {
+   "date": "2026-11-24",
+   "tool": "codex",
+   "text": "OpenAI's help page now says that starting in December, Plus, Pro, and Business plans' usage allowance will be shared across ChatGPT and Codex, measured in tokens. Instant chat will not draw from that allowance. OpenAI has not published a start date or the allowance size. Verified 2026-11-24 at https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits."
   }
  ],
  "watch": [
